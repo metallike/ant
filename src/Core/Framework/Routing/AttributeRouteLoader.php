@@ -17,6 +17,12 @@ class AttributeRouteLoader extends Loader
         parent::__construct();
     }
 
+    /**
+     * @param mixed       $resource
+     * @param string|null $type
+     *
+     * @return RouteCollection
+     */
     public function load(mixed $resource, string $type = null): RouteCollection
     {
         if (true === $this->isLoaded) {
@@ -26,8 +32,6 @@ class AttributeRouteLoader extends Loader
         $routes = new RouteCollection();
 
         foreach ($this->collector->getControllers() as $controller) {
-            #dd($controller::class);
-
             $routes->addCollection(
                 $this->import($controller::class, 'attribute')
             );
