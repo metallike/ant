@@ -2,7 +2,7 @@
 
 ## Context
 
-Symfony's built-in route loaders are not able to correctly handle controllers
+Symfony's [built-in route loaders](https://symfony.com/doc/current/routing/custom_route_loader.html#built-in-route-loaders) are not able to correctly handle controllers
 stored in various directories and levels. Using the standard loader would
 result in an overload of configuration effort and would not be practicable 
 with regard to the extensibility of the code.
