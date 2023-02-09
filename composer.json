@@ -15,6 +15,8 @@
         "symfony/yaml": "6.2.*"
     },
     "require-dev": {
+        "symfony/stopwatch": "6.2.*",
+        "symfony/web-profiler-bundle": "6.2.*"
     },
     "config": {
         "allow-plugins": {
@@ -25,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Ant\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "Ant\\Tests\\": "tests/"
         }
     },
     "replace": {
@@ -41,6 +43,15 @@
         "symfony/polyfill-php74": "*",
         "symfony/polyfill-php80": "*",
         "symfony/polyfill-php81": "*"
+    },
+    "repositories": {
+        "localPackages": {
+            "type": "path",
+            "url": "packages/*",
+            "options": {
+                "symlink": true
+            }
+        }
     },
     "scripts": {
         "auto-scripts": {
