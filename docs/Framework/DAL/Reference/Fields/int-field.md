@@ -2,9 +2,10 @@
 
 A field that stores an **int** value.
 
-## Class
-
-Open `Ant\Core\Framework\DAL\Field\IntField` on [GitHub](https://github.com/metallike/ant/blob/master/src/Core/Framework/DAL/Field/IntField.php).
+| Reference  | Description                                                                                                                       |
+|:-----------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Class      | [IntField](https://github.com/metallike/ant/blob/master/src/Core/Framework/DAL/Field/IntField.php)                                |
+| Serializer | [IntFieldSerializer](https://github.com/metallike/ant/blob/master/src/Core/Framework/DAL/Field/Serializer/IntFieldSerializer.php) |
 
 ## Description
 

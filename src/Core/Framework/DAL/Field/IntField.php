@@ -7,6 +7,9 @@ use Ant\Core\Framework\DAL\Field\Flag\Required;
 use Ant\Core\Framework\DAL\Field\Flag\PrimaryKey;
 use Ant\Core\Framework\DAL\Field\Serializer\IntFieldSerializer;
 
+/**
+ * A field that stores an int value.
+ */
 class IntField extends Field
 {
     private ?int $minValue;
