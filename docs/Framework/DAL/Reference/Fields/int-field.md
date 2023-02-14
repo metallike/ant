@@ -2,10 +2,13 @@
 
 A field that stores an **int** value.
 
+|     |       |
+|:----|:------|
+| s   | ss    |
+| Yo  | `yeah` |
+
 ## Description
 
 ```php
-use Ant\Core\Framework\DAL\Field\IntField;
-
-new IntField(string $storageName, string $propertyName, int $minValue, int $maxValze)
+new IntField(string $storageName, string $propertyName, int $minValue, int $maxValue)
 ```
