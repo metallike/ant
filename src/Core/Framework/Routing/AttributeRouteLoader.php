@@ -7,6 +7,8 @@ use Symfony\Component\Routing\RouteCollection;
 
 class AttributeRouteLoader extends Loader
 {
+    public const LOADER_NAME = 'ant_attributes';
+
     private bool $isLoaded = false;
     private RouteCollector $collector;
 
@@ -26,7 +28,7 @@ class AttributeRouteLoader extends Loader
     public function load(mixed $resource, string $type = null): RouteCollection
     {
         if (true === $this->isLoaded) {
-            throw new \RuntimeException('mäh!');
+            throw new \RuntimeException(sprintf('Do not add the "%s" loader twice', self::LOADER_NAME));
         }
 
         $routes = new RouteCollection();
@@ -48,6 +50,6 @@ class AttributeRouteLoader extends Loader
      */
     public function supports(mixed $resource, string $type = null): bool
     {
-        return 'ant_attributes' === $type;
+        return self::LOADER_NAME === $type;
     }
 }

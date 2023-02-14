@@ -3,6 +3,7 @@
 namespace Ant;
 
 use Ant\Core\Framework\Controller;
+use Ant\Core\Framework\DAL\Entity;
 use Ant\Core\Framework\Routing\DependencyInjection\Compiler\RouteCollectorPass;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -16,10 +17,9 @@ class Kernel extends BaseKernel
 
     protected function build(ContainerBuilder $container): void
     {
-        $container->registerForAutoconfiguration(Controller::class)
-            ->addTag('ant.controller');
-        $container->registerForAutoconfiguration(LoaderInterface::class)
-            ->addTag('routing.loader');
+        $container->registerForAutoconfiguration(Controller::class)->addTag('ant.controller');
+        $container->registerForAutoconfiguration(Entity::class)->addTag('ant.entity');
+        $container->registerForAutoconfiguration(LoaderInterface::class)->addTag('routing.loader');
 
 
         $container->addCompilerPass(new RouteCollectorPass(), PassConfig::TYPE_BEFORE_OPTIMIZATION, 1);

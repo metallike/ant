@@ -3,8 +3,8 @@
 namespace Ant\Administration\Frontpage\Controller;
 
 use Ant\Core\Framework\Controller;
+use Ant\Core\Framework\Routing\Route;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
 class SecondController extends Controller
 {
