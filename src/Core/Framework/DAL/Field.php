@@ -9,8 +9,8 @@ use Ant\Core\Framework\DAL\Field\Flag\Flag;
 
 abstract class Field
 {
-    private string $storageName;
-    private string $propertyName;
+    protected string $storageName;
+    protected string $propertyName;
     /**
      * @var Flag[]
      */
