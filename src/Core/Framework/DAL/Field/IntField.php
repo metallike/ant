@@ -19,7 +19,6 @@ class IntField extends Field
     {
         $this->minValue = $minValue;
         $this->maxValue = $maxValue;
-        $this->storageName = $storageName;
 
         parent::__construct($storageName, $propertyName);
     }

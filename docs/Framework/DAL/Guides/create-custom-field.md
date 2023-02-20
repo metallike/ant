@@ -69,3 +69,34 @@ class ExampleUrlField extends Field
 ```
 
 ### The field serializer
+
+
+
+### Extending field options
+
+To make the validation of the content more accurate, additional options can be passed to field types. Let's assume we want to make sure the provided URL is of a specific schema, e.g. **http** and **https**.
+
+```php
+// <plugin root>/src/DAL/Field/ExampleUrlField.php
+
+// ...
+
+class ExampleUrlField extends Field
+{
+    private ?array $schema;
+
+    public function __construct(string $storageName, string $propertyName, ?array $schema = null)
+    {
+        $this->schema = $schema;
+
+        parent::__construct($storageName, $propertyName);
+    }
+    
+    public function getSchema(): ?array
+    {
+        return $this->schema;
+    }
+
+    // ...
+}
+```
