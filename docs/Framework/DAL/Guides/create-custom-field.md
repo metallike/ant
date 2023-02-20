@@ -41,16 +41,19 @@ As you can see, there are two methods that need to be provided by this class. Th
 
 The `getFieldSerializer` method returns the FQCN of the serializer for this field type. You can either use a predefined serializer (which doesn't make much sense) or [create your own](#the-field-serializer).
 
-Let's fill the new field type with content. First we determine which flags can be used for the new field. For simplicity, let's first assume that the field can be a required field.
+Let's fill the new field type with content. First we determine which flags can be used for the new field. For simplicity, let's first assume that the field can be a required field. In addition, our field type gets its own `ExampleUrlFieldSerializer` serializer, which must be passed for further processing of the field.
 
 ```php
 // <plugin root>/src/DAL/Field/ExampleUrlField.php
 
 // ...
 use Ant\Core\Framework\DAL\Field\Flag\Required;
+use PluginNameSpace\DAL\Field\Serializer\ExampleUrlFieldSerializer;
 
 class ExampleUrlField extends Field
 {
+    // ...
+
     public function getAllowedFlags(): ?array
     {
         return [
@@ -58,7 +61,10 @@ class ExampleUrlField extends Field
         ];   
     }
 
-    // [...]
+    public function getFieldSerializer(): ?string
+    {
+        return ExampleUrlFieldSerializer::class;
+    }
 }
 ```
 
