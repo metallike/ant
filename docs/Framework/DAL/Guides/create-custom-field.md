@@ -16,6 +16,7 @@ First, we are creating a new class `ExampleField` extending from the abstract `A
 To follow the best practices, store this class in your plugin in the directory `<plugin root>/src/DAL/Field`.
 
 ```php
+// <plugin root>/src/DAL/Field/ExampleField.php
 <?php declare(strict_types=1);
 
 namespace PluginNameSpace\DAL\Field;
