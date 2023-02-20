@@ -74,7 +74,7 @@ class ExampleUrlField extends Field
 
 ### Extending field options
 
-To make the validation of the content more accurate, additional options can be passed to field types. Let's assume we want to make sure the provided URL is of a specific schema, e.g. **http** and **https**.
+To make the validation of the values more accurate, additional options can be passed to field types. Let's assume we want to make sure the provided URL is of a specific schema, e.g. **http** and **https**.
 
 ```php
 // <plugin root>/src/DAL/Field/ExampleUrlField.php
@@ -89,6 +89,8 @@ class ExampleUrlField extends Field
     {
         $this->schema = $schema;
 
+        // make sure to either call the Field::__construct()
+        // or declare $storageName and $propertyName in this method
         parent::__construct($storageName, $propertyName);
     }
     
