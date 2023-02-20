@@ -1,6 +1,6 @@
-# Creating custom fields
+# Creating a custom field type
 
-If your requirements cannot be covered by the [existing field types](../Reference/field-reference.md), you can simply create a new field type that better suits your needs.
+If your requirements cannot be covered by the [existing field types](../Reference/fields-reference.md), you can simply create a new field type that better suits your needs.
 
 ## Prerequisites
 ...
