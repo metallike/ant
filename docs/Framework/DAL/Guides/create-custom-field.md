@@ -11,19 +11,19 @@ In this example we're going to create a new field type that is storing a valid U
 
 ### The field type class
 
-First, we are creating a new class `ExampleField` extending from the abstract `Ant\Core\Framework\DAL\Field` class.
+First, we are creating a new class `ExampleUrlField` extending from the abstract `Ant\Core\Framework\DAL\Field` class.
 
 To follow the best practices, store this class in your plugin in the directory `<plugin root>/src/DAL/Field`.
 
 ```php
-// <plugin root>/src/DAL/Field/ExampleField.php
+// <plugin root>/src/DAL/Field/ExampleUrlField.php
 <?php declare(strict_types=1);
 
 namespace PluginNameSpace\DAL\Field;
 
 use Ant\Core\Framework\DAL\Field;
 
-class ExampleField extends Field
+class ExampleUrlField extends Field
 {
     public function getAllowedFlags(): ?array
     {
